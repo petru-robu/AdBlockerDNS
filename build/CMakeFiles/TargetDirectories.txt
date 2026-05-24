@@ -1,0 +1,4 @@
+/home/petru-robu/Code/AdBlocker/build/CMakeFiles/dns_resolver_core.dir
+/home/petru-robu/Code/AdBlocker/build/CMakeFiles/dns-resolver.dir
+/home/petru-robu/Code/AdBlocker/build/CMakeFiles/edit_cache.dir
+/home/petru-robu/Code/AdBlocker/build/CMakeFiles/rebuild_cache.dir
