@@ -1,5 +1,6 @@
 #pragma once
 
+#include "dns/blocklist.hpp"
 #include "dns/types.hpp"
 #include "dns/dns_message.hpp"
 #include "dns/rec_resolver.hpp"
@@ -17,6 +18,7 @@ namespace dns {
 
         Buffer receive_buffer;
         Buffer response_buffer;
+        DomainBlocklist blocklist;
 
     public:
         UdpServer(boost::asio::io_context& io, std::uint16_t port);
@@ -28,4 +30,8 @@ namespace dns {
     */
     Buffer handle_query(const Buffer& request);
     Buffer handle_query_rr(const Buffer& request);
+    Buffer handle_query_rr(
+        const Buffer& request,
+        const DomainBlocklist& blocklist
+    );
 }

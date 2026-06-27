@@ -82,7 +82,7 @@ namespace dns {
         std::vector<DnsRecord> additionals;
 
         static DnsMessage parse(const Buffer& packet);
-        Buffer serialize();
+        Buffer serialize() const;
     };
 
     class DnsMessageParser {

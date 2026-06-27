@@ -1,8 +1,77 @@
 #include "dns/dns_message.hpp"
 
+#include <cstdint>
 #include <stdexcept>
 
 namespace dns {
+    namespace {
+        void append_name(Buffer& output, const Buffer& packet, std::size_t& offset) {
+            DnsNameParser::write_uncompressed(
+                output,
+                DnsNameParser::parse(packet, offset)
+            );
+        }
+
+        Buffer parse_rdata(
+            const Buffer& packet,
+            std::size_t start,
+            std::size_t end,
+            RecordType type
+        ) {
+            Buffer output;
+            std::size_t cursor = start;
+            const auto type_value = static_cast<std::uint16_t>(type);
+
+            // These RDATA formats contain domain names which may use compression
+            // pointers into the original packet. Expand them now so a parsed
+            // message remains valid when it is serialized again.
+            if (
+                type_value == static_cast<std::uint16_t>(RecordType::NS) ||
+                type_value == static_cast<std::uint16_t>(RecordType::CNAME) ||
+                type_value == 12 // PTR
+            ) {
+                append_name(output, packet, cursor);
+            } else if (type_value == static_cast<std::uint16_t>(RecordType::SOA)) {
+                append_name(output, packet, cursor);
+                append_name(output, packet, cursor);
+
+                constexpr std::size_t soa_integer_bytes = 20;
+                if (cursor + soa_integer_bytes != end) {
+                    throw std::runtime_error("invalid SOA RDATA length");
+                }
+
+                output.insert(
+                    output.end(),
+                    packet.begin() + cursor,
+                    packet.begin() + end
+                );
+                cursor = end;
+            } else if (type_value == 15) { // MX: preference followed by exchange
+                constexpr std::size_t preference_bytes = 2;
+                if (cursor + preference_bytes > end) {
+                    throw std::runtime_error("invalid MX RDATA length");
+                }
+
+                output.insert(
+                    output.end(),
+                    packet.begin() + cursor,
+                    packet.begin() + cursor + preference_bytes
+                );
+                cursor += preference_bytes;
+                append_name(output, packet, cursor);
+            } else {
+                output.assign(packet.begin() + start, packet.begin() + end);
+                return output;
+            }
+
+            if (cursor != end) {
+                throw std::runtime_error("domain name does not match RDATA length");
+            }
+
+            return output;
+        }
+    }
+
     /*
         Flag parsing methods.
     */
@@ -87,7 +156,6 @@ namespace dns {
         DnsQuestion question;
         
         question.qname = DnsNameParser::parse(packet, offset);
-        std::cout << "offset after qname = " << offset << '\n';
         question.qtype = static_cast<RecordType>(read_u16(packet, offset));
         question.qclass = static_cast<RecordClass>(read_u16(packet, offset));
         
@@ -109,12 +177,14 @@ namespace dns {
             throw std::runtime_error("DNS packet truncated while reading record rdata");
         }
 
-        record.rdata.assign(
-            packet.begin() + offset,
-            packet.begin() + offset + rdlength
+        const std::size_t rdata_end = offset + rdlength;
+        record.rdata = parse_rdata(
+            packet,
+            offset,
+            rdata_end,
+            record.type
         );
-
-        offset += rdlength;
+        offset = rdata_end;
 
         return record;
     }
@@ -175,8 +245,6 @@ namespace dns {
 
         return message;
     }
-    
-
 
     /*
         Serializing methods.
@@ -204,15 +272,6 @@ namespace dns {
 
     void DnsMessageSerializer::write_question(Buffer& output, const DnsQuestion& question) {
         DnsNameParser::write_uncompressed(output, question.qname);
-
-        std::cout << static_cast<std::uint16_t>(question.qtype) << '\n';
-        std::cout <<  static_cast<std::uint16_t>(question.qclass) << '\n';
-
-        std::cout << "Writing question:\n";
-        std::cout << "qname = " << question.qname << '\n';
-        std::cout << "qtype = " << static_cast<std::uint16_t>(question.qtype) << '\n';
-        std::cout << "qclass = " << static_cast<std::uint16_t>(question.qclass) << '\n';
-
 
         write_u16(output, static_cast<std::uint16_t>(question.qtype));
         write_u16(output, static_cast<std::uint16_t>(question.qclass));
@@ -250,7 +309,7 @@ namespace dns {
         }
     }
 
-    Buffer DnsMessage::serialize() {
+    Buffer DnsMessage::serialize() const {
         Buffer output;
 
         DnsHeader real_header = header;

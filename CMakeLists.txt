@@ -13,6 +13,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(Threads REQUIRED)
 
 add_library(dns_resolver_core
+    src/blocklist.cpp
     src/dns_name.cpp
     src/dns_message.cpp
     src/udp_server.cpp
@@ -42,3 +43,21 @@ target_link_libraries(dns-resolver
     PRIVATE
         dns_resolver_core
 )
+
+include(CTest)
+
+if(BUILD_TESTING)
+    add_executable(blocklist-test
+        tests/blocklist_test.cpp
+    )
+
+    target_link_libraries(blocklist-test
+        PRIVATE
+            dns_resolver_core
+    )
+
+    add_test(NAME blocklist COMMAND blocklist-test)
+    set_tests_properties(blocklist PROPERTIES
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+    )
+endif()

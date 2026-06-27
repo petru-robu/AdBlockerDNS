@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/petru-robu/Code/AdBlocker
+CMAKE_SOURCE_DIR = /home/petru-robu/Code/AdBlockerDNS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/petru-robu/Code/AdBlocker/build
+CMAKE_BINARY_DIR = /home/petru-robu/Code/AdBlockerDNS/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/dns_resolver_core.dir/depend.make
@@ -72,64 +72,79 @@ include CMakeFiles/dns_resolver_core.dir/flags.make
 CMakeFiles/dns_resolver_core.dir/codegen:
 .PHONY : CMakeFiles/dns_resolver_core.dir/codegen
 
+CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o: CMakeFiles/dns_resolver_core.dir/flags.make
+CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o: /home/petru-robu/Code/AdBlockerDNS/src/blocklist.cpp
+CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o: CMakeFiles/dns_resolver_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlockerDNS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o -c /home/petru-robu/Code/AdBlockerDNS/src/blocklist.cpp
+
+CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlockerDNS/src/blocklist.cpp > CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.i
+
+CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlockerDNS/src/blocklist.cpp -o CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.s
+
 CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o: CMakeFiles/dns_resolver_core.dir/flags.make
-CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o: /home/petru-robu/Code/AdBlocker/src/dns_name.cpp
+CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o: /home/petru-robu/Code/AdBlockerDNS/src/dns_name.cpp
 CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o: CMakeFiles/dns_resolver_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlocker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o -c /home/petru-robu/Code/AdBlocker/src/dns_name.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlockerDNS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o -c /home/petru-robu/Code/AdBlockerDNS/src/dns_name.cpp
 
 CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlocker/src/dns_name.cpp > CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlockerDNS/src/dns_name.cpp > CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.i
 
 CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlocker/src/dns_name.cpp -o CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlockerDNS/src/dns_name.cpp -o CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.s
 
 CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o: CMakeFiles/dns_resolver_core.dir/flags.make
-CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o: /home/petru-robu/Code/AdBlocker/src/dns_message.cpp
+CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o: /home/petru-robu/Code/AdBlockerDNS/src/dns_message.cpp
 CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o: CMakeFiles/dns_resolver_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlocker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o -c /home/petru-robu/Code/AdBlocker/src/dns_message.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlockerDNS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o -c /home/petru-robu/Code/AdBlockerDNS/src/dns_message.cpp
 
 CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlocker/src/dns_message.cpp > CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlockerDNS/src/dns_message.cpp > CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.i
 
 CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlocker/src/dns_message.cpp -o CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlockerDNS/src/dns_message.cpp -o CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.s
 
 CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o: CMakeFiles/dns_resolver_core.dir/flags.make
-CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o: /home/petru-robu/Code/AdBlocker/src/udp_server.cpp
+CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o: /home/petru-robu/Code/AdBlockerDNS/src/udp_server.cpp
 CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o: CMakeFiles/dns_resolver_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlocker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o -c /home/petru-robu/Code/AdBlocker/src/udp_server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlockerDNS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o -c /home/petru-robu/Code/AdBlockerDNS/src/udp_server.cpp
 
 CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlocker/src/udp_server.cpp > CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlockerDNS/src/udp_server.cpp > CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.i
 
 CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlocker/src/udp_server.cpp -o CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlockerDNS/src/udp_server.cpp -o CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.s
 
 CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o: CMakeFiles/dns_resolver_core.dir/flags.make
-CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o: /home/petru-robu/Code/AdBlocker/src/rec_resolver.cpp
+CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o: /home/petru-robu/Code/AdBlockerDNS/src/rec_resolver.cpp
 CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o: CMakeFiles/dns_resolver_core.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlocker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o -c /home/petru-robu/Code/AdBlocker/src/rec_resolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/petru-robu/Code/AdBlockerDNS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o -MF CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o.d -o CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o -c /home/petru-robu/Code/AdBlockerDNS/src/rec_resolver.cpp
 
 CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlocker/src/rec_resolver.cpp > CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/petru-robu/Code/AdBlockerDNS/src/rec_resolver.cpp > CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.i
 
 CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlocker/src/rec_resolver.cpp -o CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/petru-robu/Code/AdBlockerDNS/src/rec_resolver.cpp -o CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.s
 
 # Object files for target dns_resolver_core
 dns_resolver_core_OBJECTS = \
+"CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o" \
 "CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o" \
 "CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o" \
 "CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o" \
@@ -138,13 +153,14 @@ dns_resolver_core_OBJECTS = \
 # External object files for target dns_resolver_core
 dns_resolver_core_EXTERNAL_OBJECTS =
 
+libdns_resolver_core.a: CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o
 libdns_resolver_core.a: CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o
 libdns_resolver_core.a: CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o
 libdns_resolver_core.a: CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o
 libdns_resolver_core.a: CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o
 libdns_resolver_core.a: CMakeFiles/dns_resolver_core.dir/build.make
 libdns_resolver_core.a: CMakeFiles/dns_resolver_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/petru-robu/Code/AdBlocker/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libdns_resolver_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/petru-robu/Code/AdBlockerDNS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libdns_resolver_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/dns_resolver_core.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dns_resolver_core.dir/link.txt --verbose=$(VERBOSE)
 
@@ -157,6 +173,6 @@ CMakeFiles/dns_resolver_core.dir/clean:
 .PHONY : CMakeFiles/dns_resolver_core.dir/clean
 
 CMakeFiles/dns_resolver_core.dir/depend:
-	cd /home/petru-robu/Code/AdBlocker/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/petru-robu/Code/AdBlocker /home/petru-robu/Code/AdBlocker /home/petru-robu/Code/AdBlocker/build /home/petru-robu/Code/AdBlocker/build /home/petru-robu/Code/AdBlocker/build/CMakeFiles/dns_resolver_core.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/petru-robu/Code/AdBlockerDNS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/petru-robu/Code/AdBlockerDNS /home/petru-robu/Code/AdBlockerDNS /home/petru-robu/Code/AdBlockerDNS/build /home/petru-robu/Code/AdBlockerDNS/build /home/petru-robu/Code/AdBlockerDNS/build/CMakeFiles/dns_resolver_core.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/dns_resolver_core.dir/depend
 

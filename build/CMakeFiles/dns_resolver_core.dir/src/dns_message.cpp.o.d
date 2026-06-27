@@ -1,9 +1,9 @@
 CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o: \
- /home/petru-robu/Code/AdBlocker/src/dns_message.cpp \
+ /home/petru-robu/Code/AdBlockerDNS/src/dns_message.cpp \
  /usr/include/stdc-predef.h \
- /home/petru-robu/Code/AdBlocker/inc/dns/dns_message.hpp \
- /home/petru-robu/Code/AdBlocker/inc/dns/dns_name.hpp \
- /home/petru-robu/Code/AdBlocker/inc/dns/types.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/dns_message.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/dns_name.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/types.hpp \
  /usr/include/c++/15/cstdint \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \

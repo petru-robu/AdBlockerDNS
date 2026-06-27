@@ -1,8 +1,8 @@
 CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o: \
- /home/petru-robu/Code/AdBlocker/src/dns_name.cpp \
+ /home/petru-robu/Code/AdBlockerDNS/src/dns_name.cpp \
  /usr/include/stdc-predef.h \
- /home/petru-robu/Code/AdBlocker/inc/dns/dns_name.hpp \
- /home/petru-robu/Code/AdBlocker/inc/dns/types.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/dns_name.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/types.hpp \
  /usr/include/c++/15/cstdint \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \

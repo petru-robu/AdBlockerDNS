@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/petru-robu/Code/AdBlocker/inc
+CXX_INCLUDES = -I/home/petru-robu/Code/AdBlockerDNS/inc
 
 CXX_FLAGS = -std=c++20
 

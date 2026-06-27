@@ -1,0 +1,14 @@
+# One domain per line. Blocking a domain also blocks all of its subdomains.
+# Hosts-file entries such as "0.0.0.0 ads.example.com" are also accepted.
+
+doubleclick.net
+googlesyndication.com
+googleadservices.com
+adservice.google.com
+amazon-adsystem.com
+adsrvr.org
+adnxs.com
+0.0.0.0 scorecardresearch.com
+taboola.com
+outbrain.com
+fmi.unibuc.ro

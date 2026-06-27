@@ -1,2 +1,2 @@
-/usr/bin/ar qc libdns_resolver_core.a CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o
+/usr/bin/ar qc libdns_resolver_core.a CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o CMakeFiles/dns_resolver_core.dir/src/udp_server.cpp.o CMakeFiles/dns_resolver_core.dir/src/rec_resolver.cpp.o
 /usr/bin/ranlib libdns_resolver_core.a

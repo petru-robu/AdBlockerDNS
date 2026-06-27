@@ -1,6 +1,7 @@
 CMakeFiles/dns-resolver.dir/app/main.cpp.o: \
- /home/petru-robu/Code/AdBlocker/app/main.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/15/iostream /usr/include/c++/15/bits/requires_hosted.h \
+ /home/petru-robu/Code/AdBlockerDNS/app/main.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/15/iostream \
+ /usr/include/c++/15/bits/requires_hosted.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/os_defines.h \
@@ -436,8 +437,8 @@ CMakeFiles/dns-resolver.dir/app/main.cpp.o: \
  /usr/include/bits/types/struct_statx_timestamp.h \
  /usr/include/bits/types/struct_statx.h /usr/include/fcntl.h \
  /usr/include/bits/fcntl.h /usr/include/bits/fcntl-linux.h \
- /usr/include/linux/falloc.h /usr/include/sys/eventfd.h \
- /usr/include/bits/eventfd.h \
+ /usr/include/bits/cloexec.h /usr/include/linux/falloc.h \
+ /usr/include/sys/eventfd.h /usr/include/bits/eventfd.h \
  /usr/include/boost/asio/detail/socket_types.hpp /usr/include/sys/ioctl.h \
  /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
  /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
@@ -1187,12 +1188,11 @@ CMakeFiles/dns-resolver.dir/app/main.cpp.o: \
  /usr/include/boost/asio/writable_pipe.hpp \
  /usr/include/boost/asio/write_at.hpp \
  /usr/include/boost/asio/impl/write_at.hpp \
- /home/petru-robu/Code/AdBlocker/inc/dns/dns_name.hpp \
- /home/petru-robu/Code/AdBlocker/inc/dns/types.hpp \
- /home/petru-robu/Code/AdBlocker/inc/dns/udp_server.hpp \
- /home/petru-robu/Code/AdBlocker/inc/dns/dns_message.hpp \
- /home/petru-robu/Code/AdBlocker/inc/dns/rec_resolver.hpp \
- /usr/include/c++/15/fstream \
- /usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h \
- /usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h \
- /usr/include/c++/15/bits/fstream.tcc
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/dns_name.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/types.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/udp_server.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/blocklist.hpp \
+ /usr/include/c++/15/unordered_set \
+ /usr/include/c++/15/bits/unordered_set.h \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/dns_message.hpp \
+ /home/petru-robu/Code/AdBlockerDNS/inc/dns/rec_resolver.hpp

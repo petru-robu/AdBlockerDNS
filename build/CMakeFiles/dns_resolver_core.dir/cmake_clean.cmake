@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o"
+  "CMakeFiles/dns_resolver_core.dir/src/blocklist.cpp.o.d"
   "CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o"
   "CMakeFiles/dns_resolver_core.dir/src/dns_message.cpp.o.d"
   "CMakeFiles/dns_resolver_core.dir/src/dns_name.cpp.o"
