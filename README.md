@@ -1,4 +1,6 @@
-# AdBLocker
+# AdBlocker
+
+<img src="./forbidden.webp" alt="forbidden.webp" width="45%" />
 
 ## Dependencies
 - CMake - Build system
