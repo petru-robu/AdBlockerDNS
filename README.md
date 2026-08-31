@@ -9,7 +9,7 @@
 - It supports plain domain lists and hosts-file style blocklists, with a small test suite focused on blocklist behavior.
 
 
-<img src="./forbidden.webp" alt="forbidden.webp" width="35%" />
+<!-- <img src="./forbidden.webp" alt="forbidden.webp" width="35%" /> -->
 
 ## Blocking
 
